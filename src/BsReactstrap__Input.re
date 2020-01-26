@@ -25,6 +25,7 @@ external make:
     ~className: string=?,
     ~cssModule: 'e=?,
     ~readOnly: bool=?,
+    ~multiple: bool=?,
     ~children: React.element=?,
     unit
   ) =>
@@ -60,6 +61,7 @@ module Jsx2 = {
         ~className=?,
         ~cssModule=?,
         ~readOnly=?,
+        ~multiple=?,
         children,
       ) => {
     let children = React.array(children);
@@ -90,6 +92,7 @@ module Jsx2 = {
         ~className?,
         ~cssModule?,
         ~readOnly?,
+        ~multiple?,
         ~children,
         (),
       ),
